@@ -14,7 +14,7 @@
     - 激活conda的虚拟环境
         - (Linux)source activate env_name
         - (win) activate env_name
-    - pip install django=1.8
+    - pip install django==1.8
  
  
 # 后台需要的流程
@@ -22,12 +22,20 @@
 # 创建第一个django程序
 - 命令行启动
 
+        # 创建一个django 项目
         django-admin startproject tulingxueyuan
+        # 进入到这个项目根目录
         cd tulingxueyuan
+        # 使用命令行启动django 服务器
         python manage.py runserver
         
 - pycharm 启动
     - 需要配置
+    - 1. 配置虚拟环境 python
+    - 2. 选中manage.py 文件，然后在右上面会出现一个manage 名的下拉箭头
+    - 3. 点开箭头选择Edit Configuration
+    - 4. 在弹出的对话框中，左边为 python->manage 然后在右边的 Configuration 下面的 parameters 一栏中填写runserver
+    - 现在就可以启动django 服务器了
     
 # 路由系统-urls
 - 创建app
